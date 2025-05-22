@@ -1,106 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>DevHub Forum</title>
-  <script type="module" src="../../js/main.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DevHub Forum</title>
+    <script type="module" src="../../js/main.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
-    <div class="container">
-      <a class="navbar-brand text-white fw-bold" href="#"><i class="fas fa-code me-2"></i>DevHub</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="./project-list.html"><i class="fas fa-project-diagram me-1"></i>Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white active" href="#"><i class="fas fa-comments me-1"></i>Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="./job-board.html"><i class="fas fa-briefcase me-1"></i>Jobs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/index.html"><i class="fas fa-briefcase me-1"></i>Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container py-5">
-
-    <!-- Posting Box -->
-    <div class="card mb-4 shadow-sm posting-box">
-      <div class="card-body">
-        <textarea
-          class="form-control rounded-3 posting-textarea"
-          rows="4"
-          placeholder="Apa yang ingin kamu bagikan di forum DevHub?"
-          style="resize:none;"
-        ></textarea>
-        <div class="d-flex justify-content-end mt-3">
-          <button class="btn btn-outline-success btn-sm px-4 posting-btn" type="button">
-            <i class="fas fa-paper-plane me-1"></i> Post
-          </button>
+    <main class="container py-5">
+      <h2 class="section-title mb-4">📢 Forum Diskusi</h2>
+      <!-- Posting Box -->
+      <div class="card mb-4 shadow-sm posting-box">
+        <div class="card-body">
+          <textarea
+            class="form-control rounded-3 posting-textarea"
+            rows="4"
+            placeholder="Apa yang ingin kamu bagikan di forum DevHub?"
+            style="resize: none"
+          ></textarea>
+          <div class="d-flex justify-content-end mt-3">
+            <button
+              class="btn btn-outline-success btn-sm px-4 posting-btn"
+              type="button"
+            >
+              <i class="fas fa-paper-plane me-1"></i> Post
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Forum Threads List -->
-    <h2 class="section-title mb-4 text-success forum-title">Diskusi Terbaru</h2>
-    <div class="list-group forum-list">
-      <a href="#" class="list-group-item list-group-item-action card forum-thread mb-3">
-        <div class="d-flex w-100 justify-content-between align-items-center">
-          <h5 class="card-title mb-1 thread-title">Cara Belajar Laravel dengan Efektif</h5>
-          <small class="text-muted thread-time">2 days ago</small>
+      <!-- Forum Threads List -->
+      <h2 class="section-title mb-4 text-success forum-title">
+        Diskusi Terbaru
+      </h2>
+      <div class="forum-list">
+        <div class="forum-thread bg-white border p-3 mb-4 shadow-sm">
+          <h5 class="thread-title mb-1">Cara deploy Laravel di shared hosting?</h5>
+          <p class="thread-desc mb-2 text-muted">Saya punya project Laravel dan mau coba deploy ke hosting biasa...</p>
+          <div class="d-flex justify-content-between thread-info">
+            <small>oleh <strong>Adit</strong></small>
+            <small>15 komentar • 2 hari lalu</small>
+          </div>
         </div>
-        <p class="mb-1 text-secondary thread-desc">
-          Diskusi tentang resource terbaik dan tips belajar Laravel untuk pemula.
-        </p>
-        <small class="text-muted thread-info">
-          Posted by <strong>@irfan_dev</strong> • 12 replies
-        </small>
-      </a>
-
-      <a href="#" class="list-group-item list-group-item-action card forum-thread mb-3">
-        <div class="d-flex w-100 justify-content-between align-items-center">
-          <h5 class="card-title mb-1 thread-title">Sharing Proyek Open Source Kalian!</h5>
-          <small class="text-muted thread-time">5 hours ago</small>
+    
+        <div class="forum-thread bg-white border p-3 mb-4 shadow-sm">
+          <h5 class="thread-title mb-1">Sharing pengalaman magang di startup</h5>
+          <p class="thread-desc mb-2 text-muted">Barusan kelar magang remote, ternyata culture-nya beda jauh...</p>
+          <div class="d-flex justify-content-between thread-info">
+            <small>oleh <strong>Rani</strong></small>
+            <small>8 komentar • 1 minggu lalu</small>
+          </div>
         </div>
-        <p class="mb-1 text-secondary thread-desc">
-          Tempat buat share, diskusi, dan kolaborasi proyek open source.
-        </p>
-        <small class="text-muted thread-info">
-          Posted by <strong>@sarahcode</strong> • 8 replies
-        </small>
-      </a>
+      </div>
+    </main>
 
-      <a href="#" class="list-group-item list-group-item-action card forum-thread mb-3">
-        <div class="d-flex w-100 justify-content-between align-items-center">
-          <h5 class="card-title mb-1 thread-title">Tips Lolos Interview Backend Developer</h5>
-          <small class="text-muted thread-time">1 hour ago</small>
-        </div>
-        <p class="mb-1 text-secondary thread-desc">
-          Berbagi pengalaman dan pertanyaan teknis yang sering muncul.
-        </p>
-        <small class="text-muted thread-info">
-          Posted by <strong>@rizkytech</strong> • 20 replies
-        </small>
-      </a>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center text-muted py-3 border-top mt-auto">
-    <small>&copy; 2025 DevHub Community Platform</small>
-  </footer>
-
-</body>
+    <!-- Footer -->
+    <footer class="text-center text-muted py-3 border-top mt-auto">
+      <small>&copy; 2025 DevHub Community Platform</small>
+    </footer>
+  </body>
 </html>
