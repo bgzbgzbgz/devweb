@@ -3,7 +3,6 @@ import { NavlinkUser } from './NavlinkUser.js';
 
 export function NavbarUser(currentPage) {
   const links = [
-    { href: './project-list.html', label: 'Projects' },
     { href: './forum.html', label: 'Forum' },
     { href: './job-board.html', label: 'Jobs' },
     { href: './collab.html', label: 'Collaborate' },

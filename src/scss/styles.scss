@@ -69,11 +69,10 @@ body::-webkit-scrollbar-thumb:hover {
 .card {
   border: none;
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:  box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -176,32 +175,38 @@ main .form-select {
 
 .forum-list {
   .forum-thread {
-    border-radius: 20px;
-    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
     background-color: #fff;
-    transition: background-color 0.25s ease, transform 0.3s ease;
-    border: 1px solid #ddd;
+    transition: all 0.25s ease-in-out;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
     &:hover {
-      background-color: #f8f8f8;
-      transform: translateY(-4px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+      background-color: #f9fbfd;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     }
   }
 
   .thread-title {
-    color: #222;
-    font-weight: 700;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
   }
 
   .thread-time {
     font-style: italic;
-    font-size: 0.85rem;
-    color: #777;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.5rem;
   }
 
   .thread-desc {
     font-size: 0.95rem;
-    color: #555;
+    color: #444;
+    margin-bottom: 0.5rem;
   }
 
   .thread-info {
@@ -209,6 +214,7 @@ main .form-select {
     color: #999;
   }
 }
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -224,5 +230,93 @@ main .form-select {
   select.form-select {
     width: auto;
     min-width: 140px;
+  }
+}
+.admin-sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2c3e50, #3498db);
+  padding: 1.5rem 1rem;
+  border-radius: 0 16px 16px 0;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #f1f1f1;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .nav-link {
+      font-weight: 500;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      color: #ecf0f1;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(5px);
+        color: #f1c40f !important;
+      }
+
+      &.active {
+        background-color: #f39c12;
+        color: #fff !important;
+      }
+    }
+
+    .nav-link.text-danger {
+      color: #ff6b6b !important;
+
+      &:hover {
+        background-color: rgba(255, 107, 107, 0.1);
+        color: #fff !important;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    padding: 0.75rem;
+    border-radius: 0;
+
+    h4 {
+      display: none;
+    }
+
+    .nav {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 0;
+
+      .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+.main-content {
+  margin-left: 240px;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
   }
 }
