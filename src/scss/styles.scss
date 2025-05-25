@@ -320,3 +320,118 @@ main .form-select {
     margin-left: 0;
   }
 }
+
+// verification jobs
+.verification-wrapper {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+}
+
+.verification-heading {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.verification-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.verification-card-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #0d6efd;
+  padding-left: 0.75rem;
+}
+
+.btn-verify {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+.btn-verify:hover {
+  background-color: #157347;
+}
+
+.btn-reject {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+.btn-reject:hover {
+  background-color: #b02a37;
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.tag-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.report-wrapper {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.report-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.report-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.report-card-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #0d6efd;
+  padding-left: 0.75rem;
+}
+
+.report-table td,
+.report-table th {
+  vertical-align: middle;
+}
+
+.tag {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+
+
+.tag-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.custom-pagination .pagination {
+  justify-content: center;
+}

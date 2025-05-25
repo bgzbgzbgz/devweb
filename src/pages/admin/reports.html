@@ -3,22 +3,208 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Admin Dashboard</title>
+    <title>Reports</title>
     <script type="module" src="../../js/main.js"></script>
   </head>
   <body>
     <div class="d-flex flex-column flex-lg-row min-vh-100">
-
       <div class="flex-grow-1">
         <div id="admin-topbar"></div>
 
         <main class="d-flex">
           <div id="admin-sidebar" class="bg-dark"></div>
-          <div class="main-content flex-grow-1 p-4">Konten</div>
+          <div class="main-content flex-grow-1 p-4">
+            <div class="report-wrapper">
+              <h2 class="report-title mb-4">📄 Laporan Aktivitas</h2>
+
+              <div class="report-card">
+                <div class="report-card-header">Aktivitas Sistem Terbaru</div>
+                <div class="table-responsive">
+                  <table
+                    class="table table-borderless align-middle report-table"
+                  >
+                    <thead class="table-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Waktu</th>
+                        <th>Pengguna</th>
+                        <th>Aktivitas</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="activity-table-body">
+                      <!-- Isi tabel akan di-render oleh JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <nav class="custom-pagination mt-4">
+                <ul id="pagination" class="pagination pagination-sm"></ul>
+              </nav>
+            </div>
+          </div>
         </main>
-        
       </div>
     </div>
+    <script>
+      const activityData = [
+        {
+          waktu: "22 Mei 2025 - 10:45",
+          pengguna: "admin@site.com",
+          aktivitas:
+            'Memverifikasi proyek <strong>"Sistem Booking Lapangan"</strong>',
+          status: "Sukses",
+        },
+        {
+          waktu: "22 Mei 2025 - 09:20",
+          pengguna: "galang@student.pens.ac.id",
+          aktivitas: "Mendaftar akun baru",
+          status: "Sukses",
+        },
+        {
+          waktu: "21 Mei 2025 - 16:30",
+          pengguna: "owner@web.id",
+          aktivitas: 'Membatalkan proyek <strong>"Website Alumni"</strong>',
+          status: "Dibatalkan",
+        },
+        {
+          waktu: "21 Mei 2025 - 15:10",
+          pengguna: "admin@site.com",
+          aktivitas: "Mengubah status proyek",
+          status: "Sukses",
+        },
+        {
+          waktu: "20 Mei 2025 - 14:00",
+          pengguna: "tester@dev.id",
+          aktivitas: "Login pertama kali",
+          status: "Sukses",
+        },
+        {
+          waktu: "20 Mei 2025 - 12:05",
+          pengguna: "admin@site.com",
+          aktivitas: "Menambahkan admin baru",
+          status: "Sukses",
+        },
+        {
+          waktu: "19 Mei 2025 - 11:30",
+          pengguna: "client@web.com",
+          aktivitas: "Menghapus proyek",
+          status: "Dibatalkan",
+        },
+        {
+          waktu: "19 Mei 2025 - 10:10",
+          pengguna: "admin@site.com",
+          aktivitas: "Menonaktifkan akun",
+          status: "Sukses",
+        },
+        {
+          waktu: "18 Mei 2025 - 09:40",
+          pengguna: "support@help.id",
+          aktivitas: "Mengubah profil",
+          status: "Sukses",
+        },
+        {
+          waktu: "18 Mei 2025 - 08:15",
+          pengguna: "admin@site.com",
+          aktivitas: "Mengaktifkan verifikasi dua langkah",
+          status: "Sukses",
+        },
+        {
+          waktu: "17 Mei 2025 - 17:00",
+          pengguna: "dev@localhost",
+          aktivitas: "Reset password",
+          status: "Sukses",
+        },
+        {
+          waktu: "17 Mei 2025 - 15:12",
+          pengguna: "admin@site.com",
+          aktivitas: "Menambah kategori baru",
+          status: "Sukses",
+        },
+        {
+          waktu: "17 Mei 2025 - 14:00",
+          pengguna: "user@site.com",
+          aktivitas: "Logout dari sistem",
+          status: "Sukses",
+        },
+        {
+          waktu: "16 Mei 2025 - 18:45",
+          pengguna: "admin@site.com",
+          aktivitas: "Update UI dashboard",
+          status: "Sukses",
+        },
+        {
+          waktu: "16 Mei 2025 - 17:30",
+          pengguna: "client@dev.com",
+          aktivitas: "Submit feedback",
+          status: "Sukses",
+        },
+      ];
 
+      const rowsPerPage = 10;
+      let currentPage = 1;
+
+      function renderTable(page = 1) {
+        const tbody = document.getElementById("activity-table-body");
+        tbody.innerHTML = "";
+
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        const currentData = activityData.slice(start, end);
+
+        currentData.forEach((item, index) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+          <td class="report-cell text-muted fw-semibold">${
+            start + index + 1
+          }</td>
+          <td class="report-cell">${item.waktu}</td>
+          <td class="report-cell">
+            <div class="user-info d-flex align-items-center gap-2">
+              <i class="bi bi-person-circle text-primary"></i>
+              <span>${item.pengguna}</span>
+            </div>
+          </td>
+          <td class="report-cell">${item.aktivitas}</td>
+          <td class="report-cell">
+            <span class=" tag  ${
+              item.status === "Sukses"
+                ? "tag-success report-status-success"
+                : "tag-danger report-status-danger"
+            }">
+              ${item.status}
+            </span>
+          </td>
+        `;
+
+          tbody.appendChild(row);
+        });
+
+        renderPagination();
+      }
+
+      function renderPagination() {
+        const totalPages = Math.ceil(activityData.length / rowsPerPage);
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+          const li = document.createElement("li");
+          li.className = `page-item ${i === currentPage ? "active" : ""}`;
+          li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+          li.addEventListener("click", (e) => {
+            e.preventDefault();
+            currentPage = i;
+            renderTable(currentPage);
+          });
+          pagination.appendChild(li);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderTable(currentPage);
+      });
+    </script>
   </body>
 </html>

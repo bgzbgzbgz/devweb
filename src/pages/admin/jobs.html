@@ -3,22 +3,133 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Admin Dashboard</title>
+    <title>Verification Jobs</title>
     <script type="module" src="../../js/main.js"></script>
   </head>
   <body>
     <div class="d-flex flex-column flex-lg-row min-vh-100">
-
       <div class="flex-grow-1">
         <div id="admin-topbar"></div>
 
         <main class="d-flex">
           <div id="admin-sidebar" class="bg-dark"></div>
-          <div class="main-content flex-grow-1 p-4">Konten</div>
+          <div class="main-content flex-grow-1 p-4">
+            <!-- Verification Jobs Dashboard -->
+            <div class="verification-wrapper p-4">
+              <h2 class="verification-heading mb-4">🛠️ Verifikasi Proyek</h2>
+
+              <!-- Pending Verification -->
+              <div class="verification-card mb-4">
+                <div class="verification-card-header">
+                  📄 Proyek Menunggu Verifikasi
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Nama Proyek</th>
+                        <th>Pengirim</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Sistem E-Voting</td>
+                        <td>andrian.dev@gmail.com</td>
+                        <td>20 Mei 2025</td>
+                        <td>
+                          <button class="btn btn-verify">Verifikasi</button>
+                          <button class="btn btn-reject">Tolak</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Monitoring Absensi</td>
+                        <td>faiz@smkn4.sch.id</td>
+                        <td>18 Mei 2025</td>
+                        <td>
+                          <button class="btn btn-verify">Verifikasi</button>
+                          <button class="btn btn-reject">Tolak</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Verified Projects -->
+              <div class="verification-card mb-4">
+                <div class="verification-card-header">
+                  ✅ Proyek Terverifikasi
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Nama Proyek</th>
+                        <th>Client</th>
+                        <th>Status</th>
+                        <th>Tanggal Verifikasi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Portal Alumni</td>
+                        <td>Admin PENS</td>
+                        <td>
+                          <span class="tag tag-success">Terverifikasi</span>
+                        </td>
+                        <td>10 Mei 2025</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>SI Perpustakaan</td>
+                        <td>SMK 2 Nganjuk</td>
+                        <td>
+                          <span class="tag tag-success">Terverifikasi</span>
+                        </td>
+                        <td>8 Mei 2025</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Rejected Projects -->
+              <div class="verification-card mb-4">
+                <div class="verification-card-header">❌ Proyek Ditolak</div>
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Nama Proyek</th>
+                        <th>Pengirim</th>
+                        <th>Alasan Penolakan</th>
+                        <th>Tanggal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Website Voting Osis</td>
+                        <td>rahmad.x@gmail.com</td>
+                        <td>Data tidak valid</td>
+                        <td>15 Mei 2025</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
-        
       </div>
     </div>
-
   </body>
 </html>
