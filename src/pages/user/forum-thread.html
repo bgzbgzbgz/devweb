@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detail Diskusi - DevHub Forum</title>
+  <script type="module" src="../../js/main.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <a href="./forum.html" class="btn btn-outline-secondary btn-sm mb-4">
+          &larr; Kembali ke Forum
+        </a>
+
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Cara deploy Laravel di shared hosting?</h3>
+            <div class="mb-3 text-muted">
+              <small>oleh <strong>Adit</strong> • 2 hari lalu</small>
+            </div>
+            <p>
+              Saya punya project Laravel dan mau coba deploy ke hosting biasa (bukan VPS/Cloud). Sudah coba upload via cPanel tapi halaman utamanya malah menampilkan struktur folder, bukan websitenya.
+              <br><br>
+              Sudah coba ubah file `.htaccess` juga tapi masih belum berhasil. Apakah ada langkah-langkah khusus yang perlu diperhatikan? Mungkin soal path `public` atau konfigurasi lainnya? Mohon pencerahannya, terima kasih!
+            </p>
+          </div>
+        </div>
+
+        <h4 class="mb-3">15 Komentar</h4>
+
+        <div class="comments-section">
+          <div class="card mb-3">
+            <div class="card-body">
+              <p class="card-text">Biasanya, kamu perlu memindahkan semua isi dari folder `/public` Laravel ke `public_html` di cPanel, dan sisa file Laravel lainnya diletakkan di luar `public_html`.</p>
+              <div class="text-muted">
+                <small>oleh <strong>Rani</strong> • 2 hari lalu</small>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <p class="card-text">Betul kata kak Rani. Setelah itu jangan lupa sesuaikan path di file `index.php` yang ada di `public_html` agar mengarah ke direktori Laravel yang benar.</p>
+              <div class="text-muted">
+                <small>oleh <strong>Budi</strong> • 1 hari lalu</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Tinggalkan Komentar</h5>
+            <form>
+              <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Tulis komentarmu di sini..."></textarea>
+              </div>
+              <button type="button" class="btn btn-primary">Kirim Komentar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-muted py-3 border-top mt-auto">
+    <small>&copy; 2025 DevHub Community Platform</small>
+  </footer>
+</body>
+</html>
