@@ -10,8 +10,13 @@ export function AdminSidebar(active = '') {
         </li>
         <li class="nav-item">
           <a href="./jobs.html" class="nav-link ${active === 'jobs' ? 'active text-primary' : 'text-white'}">
-            Verifikasi Job
-          </a>
+            Verifikasi Proyek
+            </a>
+          </li>
+          <li class="nav-item">
+        <a href="./verify-jobs.html" class="nav-link ${active === 'verify-jobs' ? 'active text-primary' : 'text-white'}">
+           Verifikasi Job Posting
+         </a>
         </li>
         <li class="nav-item">
           <a href="./reports.html" class="nav-link ${active === 'reports' ? 'active text-primary' : 'text-white'}">

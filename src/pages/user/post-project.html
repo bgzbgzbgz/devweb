@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bagikan Proyek Baru</title>
+  <script type="module" src="../../js/main.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <h3>Formulir Proyek Baru</h3>
+            <p class="text-muted mb-0">Bagikan proyekmu dengan komunitas DevHub.</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="projectTitle" class="form-label">Judul Proyek</label>
+                <input type="text" class="form-control" id="projectTitle" placeholder="Contoh: Aplikasi Kasir Open-Source" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="projectDescription" class="form-label">Deskripsi Singkat</label>
+                <textarea class="form-control" id="projectDescription" rows="4" placeholder="Jelaskan secara singkat tentang proyekmu, tujuannya, dan untuk siapa." required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="projectTech" class="form-label">Teknologi yang Digunakan</label>
+                <input type="text" class="form-control" id="projectTech" placeholder="Contoh: Laravel, Vue, MySQL, Bootstrap" required />
+                <div class="form-text">
+                  Pisahkan setiap teknologi dengan koma.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="projectRepo" class="form-label">Link Repository (Opsional)</label>
+                <input type="url" class="form-control" id="projectRepo" placeholder="Contoh: https://github.com/user/project" />
+              </div>
+
+              <div class="d-grid">
+                <button type="button" class="btn btn-success btn-lg">Bagikan Proyek</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-muted py-3 border-top mt-auto">
+    <small>&copy; 2025 DevHub Community Platform</small>
+  </footer>
+</body>
+</html>

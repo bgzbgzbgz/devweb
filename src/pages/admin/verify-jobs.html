@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verifikasi Job Posting</title>
+    <script type="module" src="../../js/main.js"></script>
+</head>
+<body>
+    <div class="d-flex flex-column flex-lg-row min-vh-100">
+        <div class="flex-grow-1">
+            <div id="admin-topbar"></div>
+
+            <main class="d-flex">
+                <div id="admin-sidebar" class="bg-dark"></div>
+                <div class="main-content flex-grow-1 p-4">
+                    <div class="verification-wrapper p-4">
+                        <h2 class="verification-heading mb-4">📢 Verifikasi Job Posting</h2>
+
+                        <div class="verification-card mb-4">
+                            <div class="verification-card-header">
+                                🕒 Job Posting Menunggu Verifikasi
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Judul Pekerjaan</th>
+                                            <th>Perusahaan</th>
+                                            <th>Pengirim</th>
+                                            <th>Tanggal Post</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Backend Developer (Laravel)</td>
+                                            <td>PT. Tech Innovate</td>
+                                            <td>user@techinnovate.com</td>
+                                            <td>21 Mei 2025</td>
+                                            <td>
+                                                <button class="btn btn-verify">Setujui</button>
+                                                <button class="btn btn-reject">Tolak</button>
+                                                <a href="#" class="btn btn-sm btn-info">Lihat Detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>UI/UX Designer</td>
+                                            <td>Startup Kreatif</td>
+                                            <td>hr@kreatif.id</td>
+                                            <td>20 Mei 2025</td>
+                                            <td>
+                                                <button class="btn btn-verify">Setujui</button>
+                                                <button class="btn btn-reject">Tolak</button>
+                                                <a href="#" class="btn btn-sm btn-info">Lihat Detail</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="verification-card mb-4">
+                            <div class="verification-card-header">
+                                ✅ Job Posting Disetujui
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Judul Pekerjaan</th>
+                                            <th>Perusahaan</th>
+                                            <th>Status</th>
+                                            <th>Tanggal Verifikasi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Frontend Engineer</td>
+                                            <td>Data Labs</td>
+                                            <td><span class="tag tag-success">Tampil</span></td>
+                                            <td>19 Mei 2025</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

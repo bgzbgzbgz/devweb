@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Posting Lowongan Kerja</title>
+  <script type="module" src="../../js/main.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <h3>Formulir Lowongan Kerja</h3>
+            <p class="text-muted mb-0">Isi detail di bawah ini untuk memposting lowongan baru.</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="jobTitle" class="form-label">Judul Pekerjaan</label>
+                <input type="text" class="form-control" id="jobTitle" placeholder="Contoh: Frontend Developer" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Nama Perusahaan</label>
+                <input type="text" class="form-control" id="companyName" placeholder="Contoh: PT. Teknologi Maju" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="location" class="form-label">Lokasi</label>
+                <input type="text" class="form-control" id="location" placeholder="Contoh: Jakarta, Surabaya, atau Remote" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="jobType" class="form-label">Tipe Pekerjaan</label>
+                <select class="form-select" id="jobType" required>
+                  <option selected disabled value="">Pilih tipe pekerjaan...</option>
+                  <option value="full-time">Full-time</option>
+                  <option value="part-time">Part-time</option>
+                  <option value="internship">Internship</option>
+                  <option value="freelance">Freelance</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="jobDescription" class="form-label">Deskripsi Pekerjaan</label>
+                <textarea class="form-control" id="jobDescription" rows="5" placeholder="Jelaskan tentang pekerjaan, tanggung jawab, dan kualifikasi yang dibutuhkan." required></textarea>
+              </div>
+
+              <div class="d-grid">
+                <button type="button" class="btn btn-primary btn-lg" onclick="alert('Tombol Kirim Ditekan!'); return false;">Kirim Lowongan</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-muted py-3 border-top mt-auto">
+    <small>&copy; 2025 DevHub Community Platform</small>
+  </footer>
+</body>
+</html>
